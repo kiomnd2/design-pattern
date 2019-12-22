@@ -1,16 +1,12 @@
-public class RedHeadDuck extends Duck implements Quackable,Flyable{
-    @Override
-    void display() {
-        System.out.println("빨간 오리의 오리");
+public class RedHeadDuck extends Duck{
+
+    public RedHeadDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
+        super(flyBehavior,quackBehavior);
     }
 
     @Override
-    public void fly() {
-        System.out.println("이쁘게 남");
+    public void display() {
+        System.out.println("머리가 빨간 오리입니다");
     }
 
-    @Override
-    public void quack() {
-        System.out.println("빨강빨강하게 움");
-    }
 }
