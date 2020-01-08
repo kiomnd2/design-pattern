@@ -1,13 +1,11 @@
-public class HouseBlend extends Beverage
-{
+public class HouseBlend extends Beverage{
 
-    @Override
-    public void setDescription(String description) {
-        super.setDescription("하우스 블랜드 커피");
+    public HouseBlend() {
+        setDescription("하우스블랜드");
     }
 
     @Override
     public double cost() {
-        return super.cost() +1.9;
+        return 4.0;
     }
 }
