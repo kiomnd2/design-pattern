@@ -15,17 +15,17 @@ public abstract class Pizza {
 
     public abstract void prepare();
 
-    public void bake()
+    private void bake()
     {
         System.out.println("bake for 25 minuates at 350");
     }
 
-    public void cut()
+    private void cut()
     {
         System.out.println("Cutting the pizza into diagonal slices");
     }
 
-    public void box()
+    private void box()
     {
         System.out.println("Place pizzaStore.Pizza in official pizzaStore.PizzaStore box");
     }

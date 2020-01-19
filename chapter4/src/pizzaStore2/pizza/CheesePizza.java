@@ -4,7 +4,7 @@ import pizzaStore2.PizzaIngredientFactory;
 import pizzaStore2.dough.ThinCrustDough;
 
 public class CheesePizza extends Pizza{
-    PizzaIngredientFactory pizzaIngredientFactory;
+    private PizzaIngredientFactory pizzaIngredientFactory;
 
     public CheesePizza(PizzaIngredientFactory pizzaIngredientFactory) {
         this.pizzaIngredientFactory = pizzaIngredientFactory;

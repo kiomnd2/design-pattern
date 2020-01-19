@@ -3,7 +3,7 @@ package pizzaStore2.pizza;
 import pizzaStore2.PizzaIngredientFactory;
 
 public class PeperoniPizza extends Pizza {
-    PizzaIngredientFactory pizzaIngredientFactory;
+    private PizzaIngredientFactory pizzaIngredientFactory;
 
     public PeperoniPizza(PizzaIngredientFactory pizzaIngredientFactory) {
         this.pizzaIngredientFactory = pizzaIngredientFactory;
