@@ -4,17 +4,14 @@ public class Light {
     public Light() {
     }
 
-    public void toggle() {
-        this.toggled = !this.toggled;
-        if(this.toggled)
-        {
-            System.out.println("불켭니다");
-        }
-        else
-        {
-            System.out.println("불끕니다");
-        }
+    public void on()
+    {
+        System.out.println("불켭니다");
     }
 
+    public void off()
+    {
+        System.out.println("불끕니다");
+    }
 
 }
