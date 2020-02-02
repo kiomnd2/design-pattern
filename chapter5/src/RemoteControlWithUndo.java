@@ -1,26 +1,22 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class RemoteControlWithUndo {
-    Command[] onCommand;
+    List<Command> onCommand = new ArrayList<>();
     Command undoCommand;
 
     public RemoteControlWithUndo() {
-        onCommand = new Command[7]; // 버튼 7개까지만 등록
-
         Command noCommand = new noCommand();
-
-        Arrays.stream(onCommand).forEach(command -> {
-            command = noCommand;
-        } );
         undoCommand = noCommand;
     }
     public void setCommand(int slot, Command onCommand) {
-        this.onCommand[slot] = onCommand;
+        this.onCommand.add(slot,onCommand);
     }
 
     public void onButtonWasPushed(int slot) {
-        this.onCommand[slot].execute();
-        undoCommand = this.onCommand[slot];
+        this.onCommand.get(slot).execute();
+        undoCommand = this.onCommand.get(slot);
     }
 
     public void undoButtonWasPushed() {

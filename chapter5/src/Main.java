@@ -8,16 +8,20 @@ public class Main {
         LightOnCommand lightOnCommand = new LightOnCommand(light);
         CeilingFanHighCommand cellingfanCommand = new CeilingFanHighCommand(cellingFan);
 
-        remoteControlWithUndo.setCommand(1,lightOnCommand);
-        remoteControlWithUndo.setCommand(2,cellingfanCommand);
+        remoteControlWithUndo.setCommand(0,lightOnCommand);
+        remoteControlWithUndo.setCommand(1,cellingfanCommand);
+
+        remoteControlWithUndo.onButtonWasPushed(0);
+        remoteControlWithUndo.undoButtonWasPushed();
 
         remoteControlWithUndo.onButtonWasPushed(1);
         remoteControlWithUndo.undoButtonWasPushed();
 
-        remoteControlWithUndo.onButtonWasPushed(2);
-        remoteControlWithUndo.undoButtonWasPushed();
-
-
+        System.out.println("###############Macro##############");
+        MacroCommand macroCommand = new MacroCommand();
+        macroCommand.addCommand(lightOnCommand);
+        macroCommand.addCommand(cellingfanCommand);
+        macroCommand.execute();
 
     }
 }

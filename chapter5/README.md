@@ -42,3 +42,9 @@
 * NoCommand는 Null객체며 객체에 대해 null로 표현하기 위해 사용
 * main에서 커맨드를 등록하고 해당 기능들에 동작 후 undo하면 해당 기능을 취소함
 
+
+
+#### 리모컨에 파티모드
+![세번째 다이어그램](img/Commanddiagram3.PNG)
+* 모든 기능을 한번에 처리하는 marcoCommand
+* command를 리스트로 받아 한번에 처리
